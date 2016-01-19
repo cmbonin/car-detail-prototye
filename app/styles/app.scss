@@ -1,0 +1,77 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+
+html{
+	margin: 0;
+}
+
+html,
+body{
+	height: 100%;
+	min-height: 100%;
+}
+
+body{
+	color:	 $bodyColor;
+	font-family: $bodyFont;
+	font-size: $bodyFontSize;
+}
+
+#carsales-app{
+	width: 960px;
+	margin: 20px auto;
+}
+
+h1{
+	font-size: 150%;
+	font-weight: bold;
+	margin-bottom: $defaultMargin;
+}
+
+h2{
+	font-size: 140%;
+	margin-bottom: $defaultMargin;
+}
+
+h3{
+	font-size: 110%;
+}
+
+.detail{
+	width: 100%;
+	border: 1px solid $detailBorder;
+	position: relative;
+	margin-bottom: $defaultMargin;
+}
+
+.detail .strap{
+	background: $strapColor;
+	width: 100%;
+	display: block;
+	color: #fff;
+	padding: 10px $detailSidePadding;
+	@include box-sizing();
+}
+
+.detail h3 span{
+	text-transform: uppercase;
+}
+
+.detail .content{
+	padding: 10px $detailSidePadding;
+	position: relative;
+}
+
+.detail .year{
+	position: absolute;
+	top: 10px;
+	right: $detailSidePadding;
+}
+
+.price{
+	font-weight: bold;
+	font-size: 105%;
+}
+

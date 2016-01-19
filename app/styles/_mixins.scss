@@ -1,0 +1,45 @@
+@mixin slim {
+	@media (max-width: #{$slim-width}) {
+		@content;
+	}
+}
+
+@mixin tablet-phone {
+	@media (max-width: #{$tablet-width+1}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$tablet-width+1}) {
+		@content;
+	}
+}
+
+
+@mixin box-sizing() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin border-radius($val) {
+  -webkit-border-radius: $val;
+  -moz-border-radius: $val;
+  border-radius: $val;
+  background-clip: padding-box;
+}
+
+@mixin transition($val) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}
+
+@mixin box-shadow($top, $left, $blur, $color) {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  -o-box-shadow: $val;
+  box-shadow: $top $left $blur $color;
+}
