@@ -1,0 +1,11 @@
+<label for={{userName}}>Enter name</label>
+{{input value=nameProperties.value name="userName"}}
+<label for={{userEmail}}>Enter email</label>
+{{input value=emailProperties.value name="userEmail"}}
+<label for={{userEnquiry}}> Enter enquiry</label>
+{{textarea value=enquiryProperties.value cols="80" rows="6" name="userEnquiry"}}
+<button {{action "submitter"}}>Submit</button>
+
+{{#if formIsInValid}}
+	<div class="alert">Name and email are required fields</div>
+{{/if}}

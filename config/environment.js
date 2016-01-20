@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'carsales',
     podModulePrefix: 'carsales/modules',
     environment: environment,
-    // baseURL: '/carsales',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

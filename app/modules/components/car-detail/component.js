@@ -3,10 +3,6 @@ import Em from 'ember';
  var CarDetailComponent = Em.Component.extend({
 	classNames: ['car-detail'],
 
-	didInsertElement: function(){
-		// console.log(this.get('content'))
-	},
-
 	/**
 	 * Format car price nicely
 	 * @return String
@@ -21,10 +17,17 @@ import Em from 'ember';
 		}
 	}.property('content.price'),
 
-	// hasComments:  Ember.computed.lte('content.comments', 1),
+	// hasComments:  Em.computed.lte('content.comments', 1),
 
-	// commentCount:  Ember.computed('content.comments.length'),
-
+	// commentCount:  Em.computed('content.comments.length'),
+	//
+	actions: {
+		// opens detail view of car listing
+		openDetail: function() {
+			// send action to controller
+			this.sendAction('opener');
+		}
+	}
 });
 
 export default CarDetailComponent;

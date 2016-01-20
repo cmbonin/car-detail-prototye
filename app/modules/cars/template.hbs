@@ -1,6 +1,32 @@
-<h2>Cars</h2>
-{{#each model as |item|}}
-    {{car-detail content=item}}
-{{/each}}
+<h2><span>{{model.make}}</span>, {{model.model}}</h2>
+<div class="right">{{link-to 'Click here to return to the car list' 'application' }}</div>
+<div class="detail">
+<div class="content">
+		<div class="section">
+			<h4>Car details</h4>
+			Price: {{carPrice}}<br>
+			Year: {{model.year}}<br>
+		</div>
+		<div class="section">
+			<h4>Contact details</h4>
+				Name: {{model.name}}<br>
+				Email: {{model.email}}<br>
+				Phone: {{model.phone}}<br>
+		</div>
+</div>
+</div>
 
-{{testProperty}}
+{{#if 'comments'}}
+	<div class="comments">
+		<div class="comment-count corner">Comment count: {{commentCount}}</div>
+		{{#each comments as |item|}}
+    	{{comment-detail content=item }}
+		{{/each}}
+	</div>
+
+{{/if}}
+<h4>Add a new comment:</h4>
+{{add-comment submit="submitComment"}}
+
+<h4>Ask a question</h4>
+{{email-enquiry submit="submitEnquiry"}}

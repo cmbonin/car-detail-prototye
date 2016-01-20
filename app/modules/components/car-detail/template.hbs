@@ -1,17 +1,16 @@
 <div class="detail">
-<div class="strap">
-	<h3><span>{{content.make}}</span>, {{content.model}}</h3>
+	<div class="strap">
+		{{#link-to 'cars' content.id}}
+			<h3><span>{{content.make}}</span>, {{content.model}}</h3>
+		{{/link-to}}
 	</div>
 	<div class="content">
-		<div class="year">
+		<div class="year corner">
 			{{content.year}}
 		</div>
 		<div class="price">
 			{{carPrice}}
 		</div>
-	<!--	{{#if hasComments}}
-		<div class="footnote">comments: {{commetCount}} </div>
-		{{/if}} -->
 	</div>
 
 </div>

@@ -22,21 +22,34 @@ body{
 #carsales-app{
 	width: 960px;
 	margin: 20px auto;
+	position: relative;
+
 }
 
 h1{
 	font-size: 150%;
-	font-weight: bold;
-	margin-bottom: $defaultMargin;
 }
 
 h2{
 	font-size: 140%;
-	margin-bottom: $defaultMargin;
 }
 
 h3{
 	font-size: 110%;
+}
+
+h1,h2,h3,h4,h5{
+	font-weight: bold;
+	margin-bottom: $defaultMargin;
+}
+
+h2 span,
+h3 span{
+	text-transform: uppercase;
+}
+
+.wrapper{
+	padding-bottom: 50px;
 }
 
 .detail{
@@ -55,16 +68,22 @@ h3{
 	@include box-sizing();
 }
 
-.detail h3 span{
-	text-transform: uppercase;
+.detail .strap a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.detail h3{
+	margin-bottom: 0;
 }
 
 .detail .content{
 	padding: 10px $detailSidePadding;
 	position: relative;
+	display: flex;
 }
 
-.detail .year{
+.detail .corner{
 	position: absolute;
 	top: 10px;
 	right: $detailSidePadding;
@@ -75,3 +94,53 @@ h3{
 	font-size: 105%;
 }
 
+.detail .section{
+	flex-grow: 1;
+}
+
+.comment-count{
+	font-size: 80%;
+	text-align: right;
+	margin-bottom: $defaultMargin/2;
+}
+
+button{
+	background: lightblue;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+
+  &:hover{
+  	color: #fff;
+  }
+}
+
+input,
+textarea{
+	width: 100%;
+	@include box-sizing();
+	border: 1px solid $detailBorder;
+	@include border-radius(5px);
+	margin-bottom: $defaultMargin;
+}
+
+input{
+	width: 50%;
+}
+
+label{
+	display: block;
+	margin-bottom: $defaultMargin/2;
+}
+
+.alert{
+	color: red;
+	font-weight: bold;
+}
+
+.right{
+	text-align: right;
+	margin-bottom: $defaultMargin/2;
+}

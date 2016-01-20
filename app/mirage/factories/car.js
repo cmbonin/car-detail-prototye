@@ -1,5 +1,5 @@
 /**
- * Creates some dummy data
+ * Creates some random dummy data
  */
 
 import Mirage, {faker} from 'ember-cli-mirage';
@@ -29,9 +29,15 @@ export default Mirage.Factory.extend({
     return 'person' + i + '@email.com';
   },
 	comments: function() {
-    // random generation of comments
+    var count = 2,
+        comments = [];
+      // don't give all comments
       if(!!Math.floor(Math.random() * 2)){
-        return faker.lorem.sentences();
+      // random generation of comments
+        for (var i=0;i<count;i++){
+          comments[i] = faker.lorem.sentences();
+        }
+        return comments;
       }
   }
 });
