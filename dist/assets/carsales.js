@@ -1360,7 +1360,7 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("carsales/app")["default"].create({"name":"carsales","version":"0.0.0+9b9ea276"});
+  require("carsales/app")["default"].create({"name":"carsales","version":"0.0.0+7d780c22"});
 }
 
 /* jshint ignore:end */
