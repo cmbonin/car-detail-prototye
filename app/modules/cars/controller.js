@@ -19,8 +19,7 @@ var CarController = Em.Controller.extend({
 		}
 	}.property('model.price'),
 
-	// comments: Em.computed.alias('model.comments'),
-	// comments: Em.A([this.get('model.comments')]),
+
 	comments: function () {
 		var comments;
 		// create a nice ember array

@@ -17,10 +17,6 @@ import Em from 'ember';
 		}
 	}.property('content.price'),
 
-	// hasComments:  Em.computed.lte('content.comments', 1),
-
-	// commentCount:  Em.computed('content.comments.length'),
-	//
 	actions: {
 		// opens detail view of car listing
 		openDetail: function() {
