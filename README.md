@@ -1,15 +1,3 @@
-# Carsales
-
-Hi,
-
-From our discussion in the interview this was just a demonstration of my JS/MVC skills so I haven't made any effort to with the design or fancy validation, browser compatibility etc. It's just straight up JS. If I missunderstood, send it on back to me & I will gladly prettify it for you :)
-
-Supported & tested browser: Chrome
-
-All data is generated randomly using the mirage tool & faker.
-
--------------------------------------------------------------------------
-
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
